@@ -35,14 +35,14 @@ if (isset($_POST['validate'])) {
 
             $getInfosOfThisUserReq->execute([ $user_lastname, $user_firstname, $user_pseudo]);
 
-            $usersInfo = $getInfosOfThisUserReq->fetch();
+             $usersInfos = $getInfosOfThisUserReq->fetch();
 
             //Authentifier l'utilisateur sur le site et recupérer ses donnée dans des variables globales SESSION
             $_SESSION['auth'] = true;
-            $_SESSION['id'] = $usersInfo['id'];
-            $_SESSION['lastname'] = $usersInfo['lastName'];
-            $_SESSION['firstname'] = $usersInfo['firstName'];
-            $_SESSION['pseudo'] = $usersInfo['pseudo'];
+            $_SESSION['id'] =  $usersInfos['id'];
+            $_SESSION['lastname'] =  $usersInfos['lastName'];
+            $_SESSION['firstname'] =  $usersInfos['firstName'];
+            $_SESSION['pseudo'] =  $usersInfos['pseudo'];
 
             //Rediriger l'utilisation vers la page d'acceuil
             header('Location: index.php');
