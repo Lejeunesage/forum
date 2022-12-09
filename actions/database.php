@@ -1,7 +1,7 @@
 <?php
 
 try {
-    session_start();
+    // session_start();
 
     $servername = "localhost";
     $dbname = "forum";
@@ -11,7 +11,7 @@ try {
     $bdd = new PDO($dsn, $username, $password);
 
 
-    echo "Connexion base de donnée reussie";
+    // echo "Connexion base de donnée reussie";
 } catch (PDOException $e) {
     echo "Connexion base de donnée  echouée" . $e->getMessage();
 }

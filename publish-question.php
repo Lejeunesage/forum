@@ -19,7 +19,7 @@ require("actions/users/securityAction.php");
         if (isset($errormsg)) {
             echo '<p style="color:red;">' .  $errormsg . '</p>';
         }elseif (isset($successmsg)) {
-            echo '<p style="color:red;">' .  $successmsg . '</p>';
+            echo '<p style="color:green;">' .  $successmsg . '</p>';
         }
     ?>
 

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require("actions/database.php");
 //Validation du formulaire
 if (isset($_POST['validate'])) {
